@@ -1,38 +1,480 @@
-.App {
-  text-align: center;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.is-flex{
   display: flex;
-  flex-direction: column;
+}
+
+.aic{
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.jcsb{
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hrline{
+  border-top: 1px solid #E1E3E6;
+  width: 90%;
+  margin-left: 37px;
+  margin-bottom: 19px;
+}
+
+
+.inner{
+  border-bottom: 1px solid #E1E3E6;
+}
+
+.link{
+  text-decoration: none;
+}
+
+.titles{
+  width: 36px;
+  height: 17px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #C4C4C4;
+}
+
+.titles:hover{
+  cursor: pointer;
   }
-  to {
-    transform: rotate(360deg);
+
+
+.App {
+  background: rgba(236, 241, 244, 0.54);
+}
+
+
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  position: absolute;
+  width: 1440px;
+  height: 99px;
+  top: 0px;
+  background: #FFFFFF;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  /* color: black;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center; */
+  text-decoration:none ;
+  position: relative ;
+  width: 51px;
+  height: 17px;
+  top: 50px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #C4C4C4;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  color: #272AEE;
+  font-weight: bold;
+}
+
+.underbar {
+  display: flex;
+  position: relative;
+  width: 376px;
+  height: 50px;
+  left: calc(50% - 376px/2 + 5px);
+  top: 165px;
+
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+/* Style the navigation bar links */
+.underbar a {
+  position: relative;
+  width: 36px;
+  height: 17px;
+  top: 15px;
+  text-decoration:none ;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+/* identical to box height */
+  color: #C4C4C4;
+}
+
+/* Change color on hover */
+.underbar a:hover {
+  color: #272AEE;
+  font-weight: bold;
+}
+
+.paybar {
+  display: flex;
+  position: absolute;
+  width: 306px;
+  height: 32px;
+  left: 1050px;
+  top: 170px;
+  background: #0ACF83;
+  border-radius: 4px;
+}
+
+.paybar button {
+  position: absolute;
+  text-align: center; 
+  right: 42%;
+  top: 20%;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  color: #FFFFFF;
+}
+
+.paybar:hover{
+cursor: pointer;
+}
+
+.paybar button:hover{
+  cursor: pointer;
   }
+
+.sidebar {
+  position: absolute;
+  width: 306px;
+  height: 692px;
+  left: calc(50% - 306px/2 + 482px);
+  top: 240px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+.sidebar label1{
+  position: absolute;
+  width: 200px;
+  height: 29px;
+  left: 30px;
+  top: 50px;
+
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  color: #585858;
+}
+
+.sidebar label2 {
+  position: absolute;
+  width: 37px;
+  height: 22px;
+  left: calc(-95% - 37px/2 + 339.5px);
+  top: 110px;
+
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+/* identical to box height */
+color: #585858;
+}
+
+.sidebar label3 {
+  position: absolute;
+  width: 210px;
+  height: 50px;
+  left: 30px;
+  top: 140px;
+  
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+  color: #585858;
+}
+
+.sidebar hr.first {
+  position: absolute;
+  width: 254px;
+  height: 0px;
+  left: 27px;
+  top: 195px;
+  border: 1px solid #C4C4C4;
+}
+
+.sidebar label4 {
+  position: absolute;
+  width: 72px;
+  height: 22px;
+  left: calc(50% - 72px/2 + -85px);
+  top: 230px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #585858;
+}
+
+.sidebar label5 {
+  position: absolute;
+  width: 95px;
+  height: 22px;
+  left: calc(50% - 95px/2 + -40px);
+  top: 255px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #585858;
+}
+
+.sidebar hr.second{
+  position: absolute;
+  width: 254px;
+  height: 0px;
+  left: 27px;
+  top: 290px;
+  border: 1px solid #C4C4C4;
+}
+
+.sidebar label6{
+  position: absolute;
+  width: 67px;
+  height: 22px;
+  left: calc(50% - 67px/2 + -85px);
+  top: 330px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #585858;
+}
+
+.rectangle1 {
+  position: absolute;
+  width: 89px;
+  height: 20px;
+  left: calc(50% - 89px/2 + -75px);
+  top: 370px;
+  background: rgba(39, 42, 238, 0.22);
+  border-radius: 4px;
+}
+
+.rectangle1 label{
+  position: absolute;
+  width: 27px;
+  height: 17px;
+  left: calc(50% - 27px/2 + 0px);
+  top: 2px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #05063E;
+}
+
+.rectangle2 {
+  position: absolute;
+  width: 89px;
+  height: 20px;
+  left: calc(50% - 89px/2 + 30px);
+  top: 370px;
+  background: rgba(39, 42, 238, 0.22);
+  border-radius: 4px;
+}
+
+.rectangle2 label{
+  position: absolute;
+  width: 27px;
+  height: 17px;
+  left: calc(50% - 27px/2 + 0px);
+  top: 2px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #05063E;
+}
+
+.rectangle3 {
+  position: absolute;
+  width: 123px;
+  height: 20px;
+  left: calc(50% - 89px/2 + -75px);
+  top: 400px;
+  background: rgba(39, 42, 238, 0.22);
+  border-radius: 4px;
+}
+
+.rectangle3 label{
+  position: relative;
+  width: 27px;
+  height: 17px;
+  left: calc(50% - 27px/2 + -40px);
+  top: -2px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #05063E;
+}
+
+.sidebar hr.third{
+  position: absolute;
+  width: 254px;
+  height: 0px;
+  left: 27px;
+  top: 450px;
+  border: 1px solid #C4C4C4;
+}
+
+.sidebar label7{
+  position: absolute;
+  width: 150px;
+  height: 22px;
+  left: calc(50% - 113px/2 + -60px);
+  top: 500px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+color: #585858;
+}
+
+.sidebar label8{
+  position: absolute;
+  width: 100px;
+  height: 22px;
+  left: calc(50% - 75px/2 + -76px);
+  top: 530px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #585858;
+}
+
+.sidebar label9{
+  position: absolute;
+  width: 120px;
+  height: 17px;
+  left: 100px;
+  top: 630px;
+
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #272AEE;
+}
+
+.sidebar label9:hover{
+  cursor: pointer;
+  }
+
+.body{
+position: absolute;
+width: 879px;
+height: 692px;
+left: calc(50% - 879px/2 - 160.5px);
+top: 240px;
+background: #FFFFFF;
+}
+
+.body label1{
+  position: absolute;
+  width: 250px;
+  height: 22px;
+  /* left: calc(50% - 213px/2 - 214.5px); */
+  margin-left: 79px;
+  margin-top: 28px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #585858;
 }
